@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'testapp/home.html'%}
+    
+    {% block bodyblock%}
+    <h1>Student Add Form</h1>
+    <form method="post">
+       {{form.as_p}}
+       {%csrf_token%}
+       <input type="submit" value="Add|Update Student" class="btn btn-danger">
+    </form>
+    {% endblock bodyblock%}

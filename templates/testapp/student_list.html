@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'testapp/home.html'%}
+
+   
+    {% block bodyblock%}
+    <ul>
+      {%for s in student_list%}
+        <li><a href="/detail/{{s.id}}">{{s.sname}}</a></li>
+      {%endfor%}
+      </ul>
+    {% endblock bodyblock%}
